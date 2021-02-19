@@ -1,0 +1,55 @@
+{
+  "nextId": 6,
+  "items": [
+    {
+      "id": 1,
+      "login": "admin",
+      "fullname": "Sally",
+      "role": 1,
+      "registeredAt": "2010-01-17",
+      "avaUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Haghpat_village_nature.jpg",
+      "isEnabled": true,
+      "bio": "Sally's Bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus natus facilis inventore accusantium quasi ab molestias, dolores expedita mollitia perferendis maxime vitae possimus aliquam fuga quas iure in porro placeat."
+    },
+    {
+      "id": 2,
+      "login": "mefta007",
+      "fullname": "Andrii",
+      "role": 0,
+      "registeredAt": "2019-02-25",
+      "avaUrl": "https://images.all-free-download.com/images/graphicthumb/hd_picture_of_the_beautiful_natural_scenery_03_166249.jpg",
+      "isEnabled": true,
+      "bio": "Andrii's Bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus natus facilis inventore accusantium quasi ab molestias, dolores expedita mollitia perferendis maxime vitae possimus aliquam fuga quas iure in porro placeat."
+    },
+    {
+      "id": 3,
+      "login": "Demon",
+      "fullname": "Dmytro",
+      "role": 0,
+      "registeredAt": "2019-07-22",
+      "avaUrl": "https://i.pinimg.com/originals/a1/88/27/a18827158c5845afc342a9bc4a1bfdcd.jpg",
+      "isEnabled": false,
+      "bio": "Dmytro's Bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus natus facilis inventore accusantium quasi ab molestias, dolores expedita mollitia perferendis maxime vitae possimus aliquam fuga quas iure in porro placeat."
+    },
+    {
+      "id": 4,
+      "login": "-_-",
+      "fullname": "Dimon",
+      "role": 0,
+      "registeredAt": "2016-11-08",
+      "avaUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcScPvWnbU1cLvtI56qhSE9rDdsqrmC2romUXA&usqp=CAU",
+      "isEnabled": false,
+      "bio": "Dimon's Bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus natus facilis inventore accusantium quasi ab molestias, dolores expedita mollitia perferendis maxime vitae possimus aliquam fuga quas iure in porro placeat."
+    },
+    {
+      "id": 5,
+      "login": "DarkFlamingo",
+      "fullname": "Max",
+      "role": 1,
+      "registeredAt": "2015-10-20",
+      "avaUrl": "https://res.cloudinary.com/miles-extranet-dev/image/upload/w_800,h_480,c_fill,q_60/ArkansasSP/account_photos/41/690bcbbde7ec44220cf3352e5b28bf3d_E48A0391",
+      "isEnabled": true,
+      "bio": "Max's Bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus natus facilis inventore accusantium quasi ab molestias, dolores expedita mollitia perferendis maxime vitae possimus aliquam fuga quas iure in porro placeat."
+    }
+  ]
+}

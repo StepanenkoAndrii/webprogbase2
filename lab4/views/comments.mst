@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+{{> head}}
+
+<body>
+
+    {{> header}}
+
+    <div class="bigDiv">
+        <div class="mainPhotos">
+            <p class="entityP">Comments</p>
+            <table>
+                <tr>
+                    <th>Comment</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                {{#comments}}
+                <tr>
+                    <td><p>{{commentText}}</p></td>
+                    <td>{{commentDate}}</td>
+                    <td class="deleteTd">
+                        <form method="POST" action="comments/{{_id}}">
+                            <input class="deleteComment" type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+                {{/comments}}
+                </tr>
+            </table>
+            {{^comments}}
+                <p class="notFound">No comments found :(<p>
+            {{/comments}}
+        </div>
+        <div class="paginationDiv">
+            <div class="search">
+                {{#photoId}}
+                <form method="get" action="/photos/{{photoId}}/comments">
+                    <div class="nameSearch">
+                        {{#pages}}
+                        {{#namePage}}
+                            <input class="nameInput" type="text" name="name" placeholder="Enter comment text" value={{namePage}}>
+                        {{/namePage}}
+                        {{^namePage}}
+                            <input class="nameInput" type="text" name="name" placeholder="Enter comment text">
+                        {{/namePage}}
+                        <button class="findButtonFixed">Find</button>
+                        {{/pages}}
+                    </div>
+                </form>
+
+                <form method="get" action="/photos/{{photoId}}/comments">
+                    <div class="pageSearch">
+                        {{#pages}}
+                            {{#prevPage}}
+                                {{#namePage}}
+                                <a class="prev" href="/photos/{{photoId}}/comments?page={{prevPage}}&name={{namePage}}">Previous</a>
+                                {{/namePage}}
+                                {{^namePage}}
+                                <a class="prev" href="/photos/{{photoId}}/comments?page={{prevPage}}">Previous</a>
+                                {{/namePage}}
+                            {{/prevPage}}
+                            {{^prevPage}}
+                                <span class="prev">Previous</span>
+                            {{/prevPage}}
+                            <input type="number" class="currentPageNumber" name="page" min="1" max="{{pagesNumber}}" value={{currentPage}}>
+                            {{#namePage}}
+                                <input type="hidden" name="name" value={{namePage}}>
+                            {{/namePage}}
+                            <p class="slash"> / </p>
+                            <p class="pageNumber">{{pagesNumber}}</p>
+                            {{#nextPage}}
+                                {{#namePage}}
+                                <a class="next" href="/photos/{{photoId}}/comments?page={{nextPage}}&name={{namePage}}">Next</a>
+                                {{/namePage}}
+                                {{^namePage}}
+                                <a class="next" href="/photos/{{photoId}}/comments?page={{nextPage}}">Next</a>
+                                {{/namePage}}
+                            {{/nextPage}}
+                            {{^nextPage}}
+                                <span class="next">Next</span>
+                            {{/nextPage}}
+                            <button class="findButtonFixed">Find</button>
+                        {{/pages}}
+                    </div>
+                </form>
+
+                <div class="specialAContainer">
+                <a class="goToNewComment" href="/photos/{{photoId}}/comments/new_comment">New Comment</a>
+                </div>
+                {{/photoId}}
+
+            </div>
+        </div>
+    </div>
+
+    {{> footer}}
+
+</body>
+
+</html>

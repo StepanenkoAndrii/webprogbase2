@@ -1,0 +1,26 @@
+<header>
+
+    <div class="menu">
+        <div class="left">
+            <div class="ul">
+                <p><a class="{{disabled}}" class="home" href="/">Home</a></p>
+            </div>
+            <div class="ul">
+                <p><a class="{{userDisabled}}" class="users" href="/users">Users</a></p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="ul">
+                <p><a class="{{photoDisabled}}" class="photos" href="/photos">Photos</a></p>
+            </div>
+            <div class="ul">
+                <p><a class="{{aboutDisabled}}" class="about" href="/about">About</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="center">
+        <img src="/images/logo7.png" alt="logo" width=25% height=25%>
+    </div>
+    
+</header>

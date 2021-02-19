@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+{{> head}}
+
+<body>
+
+    {{#photo}}
+    <div class="backTo">
+        <a href="../photos">Back to Photos</a>
+    </div>
+    <div class="photoInfo">
+        <div class="photoImg">
+            <img src="{{photoUrl}}">
+        </div>
+        <div class="otherPhotoInfo">
+            <p class="photoNameP"><b>{{photoName}}</b></p>
+            <p class="locationP">Location: <b>{{location}}</b></p>
+            <p class="likesP">Likes: {{likes}}</p>
+            <p class="dislikesP">Dislikes: {{dislikes}}</p>
+            <p class="photoDateP">Date: {{photoDate}}</p>
+            <form method="POST" action="/photos/{{_id}}">
+                <input class="deleteInput" type="submit" value="Delete photo">
+            </form>
+            <div class="specialAContainer">
+                <a class="goToComments" href="/photos/{{_id}}/comments">Comments</a>
+            </div>
+        </div>
+    </div>
+    {{/photo}}
+
+    {{> footer}}
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+{{> head}}
+
+<body>
+
+    {{> header}}
+
+    <div class="bigDiv">
+        <div class="mainPhotos">
+            <p class="entityP">Photos</p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                {{#photos}}
+                <tr>
+                    <td><a href="/photos/{{_id}}">{{photoName}}</a></td>
+                    <td>{{location}}</td>
+                    <td>{{photoDate}}</td>
+                </tr>
+                {{/photos}}
+                </tr>
+            </table>
+            {{^photos}}
+                <p class="notFound">No photos found :(<p>
+            {{/photos}}
+        </div>
+        <div class="paginationDiv">
+            <div class="search">
+    
+                <form method="get" action="/photos">
+                    <div class="nameSearch">
+                        {{#pages}}
+                        {{#namePage}}
+                            <input class="nameInput" type="text" name="name" placeholder="Enter photo name" value={{namePage}}>
+                        {{/namePage}}
+                        {{^namePage}}
+                            <input class="nameInput" type="text" name="name" placeholder="Enter photo name">
+                        {{/namePage}}
+                        <button class="findButtonFixed">Find</button>
+                        {{/pages}}
+                    </div>
+                </form>
+    
+                <form method="get" action="/photos">
+                    <div class="pageSearch">
+                        {{#pages}}
+                            {{#prevPage}}
+                                {{#namePage}}
+                                <a class="prev" href="/photos?page={{prevPage}}&name={{namePage}}">Previous</a>
+                                {{/namePage}}
+                                {{^namePage}}
+                                <a class="prev" href="/photos?page={{prevPage}}">Previous</a>
+                                {{/namePage}}
+                            {{/prevPage}}
+                            {{^prevPage}}
+                                <span class="prev">Previous</span>
+                            {{/prevPage}}
+                            <input type="number" class="currentPageNumber" name="page" min="1" max="{{pagesNumber}}" value={{currentPage}}>
+                            {{#namePage}}
+                                <input type="hidden" name="name" value={{namePage}}>
+                            {{/namePage}}
+                            <p class="slash"> / </p>
+                            <p class="pageNumber">{{pagesNumber}}</p>
+                            {{#nextPage}}
+                                {{#namePage}}
+                                <a class="next" href="/photos?page={{nextPage}}&name={{namePage}}">Next</a>
+                                {{/namePage}}
+                                {{^namePage}}
+                                <a class="next" href="/photos?page={{nextPage}}">Next</a>
+                                {{/namePage}}
+                            {{/nextPage}}
+                            {{^nextPage}}
+                                <span class="next">Next</span>
+                            {{/nextPage}}
+                            <button class="findButtonFixed">Find</button>
+                        {{/pages}}
+                    </div>
+                </form>
+
+                <div class="specialAContainer">
+                <a class="goToNewPhoto" href="/photos/new">New Photo</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {{> footer}}
+
+</body>
+
+</html>

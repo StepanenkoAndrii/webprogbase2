@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+{{> head}}
+
+<body>
+
+    {{#user}}
+
+    <div class="backTo">
+        <a href="../users">Back to Users</a>
+    </div>
+    <div class="userInfo">
+        <div class="userAva">
+            <img src="{{avaUrl}}">
+        </div>
+        <div class="userBio">
+            <p class="fullnameP">{{fullname}}</p>
+            <p class="extraInfoP">({{login}}) {{registeredAt}}</p>
+            <p class="bio">{{bio}}</p>
+        </div>
+    </div>
+
+    {{/user}}
+
+    {{> footer}}
+
+</body>
+
+</html>

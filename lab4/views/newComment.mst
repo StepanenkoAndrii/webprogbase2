@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+{{> head}}
+
+<body>
+
+    {{> header}}
+    
+    <div class="newPhotoInfo">
+        {{#photoId}}
+        <form class="newForm" method="POST" action="./" enctype="multipart/form-data">
+        {{/photoId}}
+            <p>New comment</p>
+            <div class="newStructure">
+                <div><p>Comment:</p><textarea type="text" name="commentText" required></textarea></div><br>
+                <div id="comDate"><p>Date:</p><input type="date" name="commentDate" required></div><br>
+                <input id="useless" name="photoId" value="{{photoId}}">
+                <input class="inputSubmit" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    {{> footer}}
+
+</body>
+
+</html>

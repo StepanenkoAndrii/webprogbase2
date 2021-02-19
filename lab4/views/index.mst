@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+{{> head}}
+
+<body>
+
+    {{> header}}
+
+    <div class="main">
+        <p class="underLogoP">
+            Making your life colourful!
+        </p>
+        <p class="mainText">
+            Feel free to post any photos here and share them among your friends!
+        </p>
+    </div>
+
+    {{> footer}}
+
+</body>
+
+</html>
