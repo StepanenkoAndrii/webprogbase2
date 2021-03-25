@@ -10,6 +10,9 @@
 
     <div id="app">
         <div id="div-left-part-2">
+            <div class="div-back-to-photos second-time">
+                <a href="../photos"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back to Photos</a>
+            </div>
             <div id="div-new-photo">
                 <form class="newForm" id="form-photo-creation" enctype="multipart/form-data">
                     <p>New photo</p>

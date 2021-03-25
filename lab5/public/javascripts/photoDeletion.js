@@ -14,8 +14,6 @@ function deleteData() {
             }),
         ])
         .then((templateStr) => {
-            // const modalWindow = document.getElementById("exampleModal");
-            // bootstrap.Modal.getInstance(modalWindow).hide();
             const htmlStr = Mustache.render(templateStr[0]);
             const mainDiv = document.getElementById("div-main");
             mainDiv.innerHTML = htmlStr;
