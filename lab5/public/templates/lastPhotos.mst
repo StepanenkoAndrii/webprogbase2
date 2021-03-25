@@ -1,0 +1,24 @@
+<div id="div-last-photos-main">
+    <div id="div-p-list">
+        <p id="p-list-main">Last photos:</p>
+    </div>
+    <div>
+
+        <hr>
+        {{#photos}}
+        <div class="div-last-photo-container">
+            <hr>
+            <a href="/photos/{{_id}}">{{photoName}}</a>
+            <div>
+                <p class="p-photo-attribute">Location: </p>
+                <p class="p-photo-value">{{location}}</p>
+                <p class="p-photo-attribute p-second">Date: </p>
+                <p class="p-photo-value">{{photoDate}}</p>
+            </div>
+            <hr>
+        </div>
+        {{/photos}}
+        <hr>
+
+    </div>
+</div>

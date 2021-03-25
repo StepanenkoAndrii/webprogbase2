@@ -1,0 +1,11 @@
+<div id="div-main-photo-deleted">
+    <div class="div-back-to-photos">
+        <a href="../../photos"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back to Photos</a>
+    </div>
+    <div id="div-image-deleted">
+        <img src="/images/trash.png" alt="rubbish bin" id="img-rubbish">
+    </div>
+    <div id="div-text">
+        <p>Photo has been successfully deleted</p>
+    </div>
+</div>

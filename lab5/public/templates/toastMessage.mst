@@ -1,0 +1,11 @@
+<div id="div-current-toast-{{id}}" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="{{photoUrl}}" class="rounded me-2" alt="new photo's small image" width="25px" height="25px">
+      <strong class="me-auto">New photo</strong>
+      <small class="text-muted">{{time}}</small>
+      <button id="button-close-toast-{{id}}" type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      <a id="a-new-photo-created-{{id}}">{{name}}</a>
+    </div>
+  </div>

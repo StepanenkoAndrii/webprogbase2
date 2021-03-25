@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> head}}
+</head>
+
+<body>
+    {{> header}}
+    {{> toast}}
+    <div id="div-main">
+        <div id="app">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="/javascripts/photosRender.js"></script>
+        </div>
+    </div>
+    <div id="div-search-new">
+        <input id="searchName" name="search_text" type="text" class="form-control" placeholder="Enter photo name:">
+        <a class="a-new-photo" href="/photos/new">New photo</a>
+    </div>
+    {{> footer}}
+</body>
+
+</html>

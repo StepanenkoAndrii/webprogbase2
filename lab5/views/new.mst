@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+{{> head}}
+
+<body>
+
+    {{> header}}
+    {{> toast}}
+
+    <div id="app">
+        <div id="div-left-part-2">
+            <div id="div-new-photo">
+                <form class="newForm" id="form-photo-creation" enctype="multipart/form-data">
+                    <p>New photo</p>
+                    <div>
+                        <p class="p-photo-attribute">Name: </p>
+                        <input type="text" name="photoName" required>
+                    </div>
+                    <div>
+                        <p class="p-photo-attribute">Location:</p>
+                        <input type="text" name="location" required>
+                    </div>
+                    <div>
+                        <p class="p-photo-attribute">Likes: </p>
+                        <input type="number" name="likes" required>
+                    </div>
+                    <div>
+                        <p class="p-photo-attribute">Dislikes: </p>
+                        <input type="number" name="dislikes" required>
+                    </div>
+                    <div>
+                        <p class="p-photo-attribute">Date: </p>
+                        <input type="date" name="photoDate" required>
+                    </div>
+                    <div>
+                        <p class="p-photo-attribute">Photo (file): </p>
+                        <input type="file" name="photoUrl" id="input-file" required>
+                    </div>
+                    <button class="input-new-photo-submit" id="input-new-photo">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div id="div-right-part-2">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+            <script src="/javascripts/photoCreation.js"></script>
+        </div>
+    </div>
+
+    {{> footer}}
+
+</body>
+
+</html>

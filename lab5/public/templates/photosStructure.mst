@@ -1,0 +1,40 @@
+{{#photos.length}}
+<table class="container">
+    <thead>
+        <tr>
+            <th>
+                <h1>Name</h1>
+            </th>
+            <th>
+                <h1>Location</h1>
+            </th>
+            <th>
+                <h1>Likes</h1>
+            </th>
+            <th>
+                <h1>Dislikes</h1>
+            </th>
+            <th>
+                <h1>Date</h1>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#photos}}
+        <tr>
+            <td onclick="window.location='/photos/{{_id}}'">{{photoName}}</td>
+            <td>{{location}}</td>
+            <td>{{likes}}</td>
+            <td>{{dislikes}}</td>
+            <td>{{photoDate}}</td>
+        </tr>
+        {{/photos}}
+    </tbody>
+</table>
+{{{pagination}}}
+{{/photos.length}}
+{{^photos.length}}
+<div class="div-nothing-found">
+    <p>No photos found</p>
+</div>
+{{/photos.length}}
